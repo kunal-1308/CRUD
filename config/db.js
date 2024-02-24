@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
-const db = process.env.MONGO_URI;
+const username = encodeURIComponent("root");
+const password = encodeURIComponent("root");
+const MONGO_URI = `mongodb+srv://${username}:${password}@user-api.ktizpgh.mongodb.net/?retryWrites=true&w=majority&appName=user-api`;
+const db = MONGO_URI;
 
 const connectDB = async () => {
 	try {
